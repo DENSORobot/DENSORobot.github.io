@@ -1,0 +1,47 @@
+.. rosservice-calset.rst
+
+------
+CALSET
+------
+Calibrating the relationship between position information recognized
+by the robot controller and the actual position of the robot arm
+is called CALSET.
+
+#. Edit the RANG value
+
+   Look at the QR code side of COBOTTA::
+
+     CVR038A1-*****,J1:<a>,J2:<b>,J2:<b>,J3:<c>,J4:<d>,J5:<e>,J6:<f>
+
+   Edit <a>, <b>, <c>, <d>, <e>, <f> to
+   ``denso_cobotta_ros/denso_cobotta_driver/config/parameters.yaml``::
+
+         rang_value:
+	 - <a>
+	 - <b>
+	 - <c>
+	 - <d>
+	 - <e>
+	 - <f>
+
+#. Run the denso_cobotta_driver node
+
+   Try::
+
+      $ roslaunch denso_cobotta_driver denso_cobotta_driver.launch
+
+#. CALSET
+
+   Enter the CALSET command::
+
+     $ rosservice call /cobotta/exec_calset
+
+#. Run MoveIt
+
+   .. caution::
+      To make sure that the emergency Stop button is **NOT pressed**
+      because Motor does not become on.
+
+   Try::
+
+     $ roslaunch denso_cobotta_bringup denso_cobotta_bringup.launch [gripper_type:=parallel|vacuum]

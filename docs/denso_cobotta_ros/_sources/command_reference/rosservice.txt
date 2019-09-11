@@ -1,0 +1,129 @@
+.. rosservice.rst
+
+==========
+rosservice
+==========
+-----
+Motor
+-----
+
++-----------+----------------+
+|  state:   | Motor power is |
++===========+================+
+|   true    |      ON        |
++-----------+----------------+
+|   false   |      OFF       |
++-----------+----------------+
+
+#. Get the motor power state
+   ::
+
+      $ rosservice call /cobotta/get_motor_state "{}"
+
+#. Turn ON/OFF the motor power
+   ::
+
+      $ rosservice call /cobotta/set_motor_state "state: true"
+
+-----
+Brake
+-----
+
++-----------+----------------+
+|  state:   |   Brake is     |
++===========+================+
+|   true    |     Lock       |
++-----------+----------------+
+|   false   |    Release     |
++-----------+----------------+
+
+#. Get the brake state
+   ::
+
+      $ rosservice call /cobotta/get_brake_state "{}"
+
+#. Set the brake state
+   ::
+
+      $ rosservice call /cobotta/set_brake_state "state: [false, false, false, false, false, false]"
+
+---
+LED
+---
+
++-------+--------+-------+-------------+
+|  red: | green: | blue: | blink_rate: |
++=======+========+=======+=============+
+| 0-255 |  0-255 | 0-255 |    0-255    |
++-------+--------+-------+-------------+
+
++-------------+------------------------+
+| blink_rate: |      Description       |
++=============+========================+
+|      0      | LED is always ON       |
++-------------+------------------------+
+|     255     | LED is slowly blinking |
++-------------+------------------------+
+
+.. attention::
+   If you set the blink_rate small number, LED blinks quickly.
+   Fast blinking will affect on your body.
+
+::
+
+   $ rosservice call /cobotta/set_LED_state  "{red: 255, green: 255, blue: 255, blink_rate: 255}"
+
+-----
+Error
+-----
+
+#. Clear all errors
+
+   Clear errors except for FATAL error::
+
+     $ rosservice call /cobotta/clear_error
+
+   This command is the same as both ``/cobotta/clear_robot_error`` and
+   ``/cobotta/clear_safe_state``.
+
+   .. note::
+      When the motor power is ON, this command causes ``Bus voltage failure``.
+      So we recommend not to execute this command when the motor is ON.
+      If ``Bus voltage failure`` occurs, you can clear it by executing
+      ``rosservice call /clear_robot_error``.
+
+#. Clear robot errors
+
+   .. _clear_robot_error:
+
+   ::
+
+      $ rosservice call /cobotta/clear_robot_error
+
+#. Clear a safe state
+
+   .. _clear_safe_state:
+
+   ::
+
+      $ rosservice call /cobotta/clear_safe_state
+
+   After executing this command and robot errors don't occur,
+   you are able to turn on the motor power.
+
+   .. note::
+      When the motor power is this command causes ``Bus voltage failure``.
+      Please refer to the note of ``/cobotta/clear_error``.
+
+#. FATAL error
+
+   | If a FATAL error occurs, quit all applications and shutdown Ubuntu.
+   | When the COBOTTA's LED light has gone out,
+   | turn off the COBOTTA's power swtich.
+   |
+   | So restart COBOTTA.
+
+..
+.. CALSET
+..
+.. include:: /command_reference/rosservice_calset.rst

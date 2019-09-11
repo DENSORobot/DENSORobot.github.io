@@ -1,0 +1,100 @@
+.. quickstart_on_moveit.rst
+
+Quickstart on MoveIt!
+=====================
+----------
+Quickstart
+----------
+#. Preparation
+
+   Open a new terminal::
+
+     $ source ~/catkin_ws/devel/setup.bash
+
+#. Start RViz and MoveGroup node
+
+   .. caution::
+      To make sure that the emergency stop button is **NOT pressed**
+      because motor does not become on.
+
+   Try::
+
+     $ roslaunch denso_cobotta_bringup denso_cobotta_bringup.launch
+
+
+   * Parallel gripper::
+
+     $ roslaunch denso_cobotta_bringup denso_cobotta_bringup.launch gripper_type:=parallel
+
+   * Vacuum gripper::
+
+     $ roslaunch denso_cobotta_bringup denso_cobotta_bringup.launch gripper_type:=vacuum
+
+#. Run the sample script
+
+   Open a new terminal::
+
+     $ source ~/catkin_ws/devel/setup.bash
+
+   Install the dependent package::
+
+     $ sudo apt install ros-kinetic-moveit-python
+
+   Try::
+
+     $ python ~/catkin_ws/src/denso_cobotta_ros/scripts/packing_pose.py
+       ...
+       0: Old packing pose, 1: New packing pose, 2: Home pose, Others: Exit
+       Select the value:
+
+   Enter ``2`` for a trial.
+
+---
+LED
+---
+The color of LED display the state of COBOTTA.
+
++--------+-----------------------------------------------------------------------+
+|  Color |                              State                                    |
++========+=======================================================================+
+| Green  | No error: the motor is running or it is possible to be turned ON.     |
++--------+-----------------------------------------------------------------------+
+| Yellow | :ref:`Robot error <clear_robot_error>`                                |
++--------+-----------------------------------------------------------------------+
+|   Red  | :ref:`Safe State, SafetyMCU error, Emergency stop <clear_safe_state>` |
++--------+-----------------------------------------------------------------------+
+
+..
+.. CALSET
+..
+.. include:: /command_reference/rosservice_calset.rst
+
+----------
+Simulation
+----------
+The following section will help you to simulate COBOTTA on Gazebo.
+
+.. important::
+   `Gazebo system requirements <http://gazebosim.org/tutorials?tut=guided_b1&cat=#Systemrequirements>`_:
+
+   * A dedicated GPU,
+
+     * Nvidia cards tend to work well in Ubuntu
+
+   * A CPU that is at least an Intel I5, or equivalent,
+   * At least 500MB of free disk space,
+   * Ubuntu Trusty or later installed.
+
+   COBOTTA has Atom CPU and no graphics card,
+   so it doesn't meet the requirements of Gazebo.
+   Do Gazebo simulation on your PC.
+
+
+Install the dependent package::
+
+  $ sudo apt install ros-kinetic-gazebo-ros-control
+
+Try::
+
+  $ roslaunch denso_cobotta_bringup denso_cobotta_bringup.launch sim:=true gripper_type:=none
+

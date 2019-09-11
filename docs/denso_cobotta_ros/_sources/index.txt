@@ -1,0 +1,26 @@
+.. denso_cobotta_ros documentation master file, created by
+   sphinx-quickstart on Wed Aug 28 17:12:20 2019.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+denso_cobotta_ros's documentation
+=================================
+
+.. image:: images/cobotta.jpg
+
+Thank you for purchasing DENSO Robotics.
+
+This document describes only how to use denso_cobotta_ros's pakcage.
+
+Please refer to `here <https://www.fa-manuals.denso-wave.com/en/select.php>`_
+about safety precautions and product information.
+
+Contents:
+
+.. toctree::
+   :maxdepth: 3
+
+   /getting_started
+   /quickstart_on_moveit
+   /command_reference/index
+

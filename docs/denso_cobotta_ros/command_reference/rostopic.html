@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rostopic &mdash; denso_cobotta_ros 1.2.2 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="denso_cobotta_ros 1.2.2 documentation" href="../index.html"/>
+        <link rel="up" title="Command Reference" href="index.html"/>
+        <link rel="prev" title="rosservice" href="rosservice.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> denso_cobotta_ros
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_on_moveit.html">Quickstart on MoveIt!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Command Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rosservice.html">rosservice</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">rostopic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#button">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#miniio">MiniIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-state">Robot state</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#safety-mcu-state">Safety MCU state</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parallel-gripper">Parallel gripper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vacuum-gripper">Vacuum gripper</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">denso_cobotta_ros</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Command Reference</a> &raquo;</li>
+      
+    <li>rostopic</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/command_reference/rostopic.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rostopic">
+<h1>rostopic<a class="headerlink" href="#rostopic" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="button">
+<h2>Button<a class="headerlink" href="#button" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Plus(+) button</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic echo -c /cobotta/plus_button
+</pre></div>
+</div>
+</li>
+<li><p class="first">Minus(-) button</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic echo -c /cobotta/minus_button
+</pre></div>
+</div>
+</li>
+<li><p class="first">Function button</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic echo -c /cobotta/function_button
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="miniio">
+<h2>MiniIO<a class="headerlink" href="#miniio" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">data:</th>
+<th class="head">Hex</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>0x0000</td>
+<td>all bits are OFF</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>0x0001</td>
+<td>bit0 is ON</td>
+</tr>
+<tr class="row-even"><td>32768</td>
+<td>0x8000</td>
+<td>bit15 is ON</td>
+</tr>
+<tr class="row-odd"><td>65535</td>
+<td>0xffff</td>
+<td>all bits are ON</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><p class="first">Get the Mini IO data</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic echo -c /cobotta/miniIO_input
+</pre></div>
+</div>
+</li>
+<li><p class="first">Set the Mini IO data</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic pub /cobotta/miniIO_output std_msgs/UInt16 &quot;data: 0&quot;
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="robot-state">
+<h2>Robot state<a class="headerlink" href="#robot-state" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic echo -c /cobotta/robot_state
+</pre></div>
+</div>
+</div>
+<div class="section" id="safety-mcu-state">
+<h2>Safety MCU state<a class="headerlink" href="#safety-mcu-state" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic echo -c /cobotta/safe_state
+</pre></div>
+</div>
+</div>
+<div class="section" id="parallel-gripper">
+<h2>Parallel gripper<a class="headerlink" href="#parallel-gripper" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="54%" />
+<col width="24%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">target_position[m]</th>
+<th class="head">speed[%]</th>
+<th class="head">effort[n]</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0.0 - 0.015</td>
+<td>1.0 - 100.0</td>
+<td>6.0 - 20.0</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last"><code class="docutils literal"><span class="pre">target_position</span></code> is changed on 1.2.2.
+Before 1.2.1, <code class="docutils literal"><span class="pre">target_position</span></code> range is 0.0 - 0.03.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Parallel gripper open</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic pub /cobotta/gripper_move/goal \
+    denso_cobotta_gripper/GripperMoveActionGoal \
+      &quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, \
+        goal_id: { stamp: { secs: 0, nsecs: 0}}, \
+        goal: {target_position: 0.015, speed: 10.0, effort: 10.0}}&quot;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Parallel gripper close</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic pub /cobotta/gripper_move/goal \
+    denso_cobotta_gripper/GripperMoveActionGoal \
+      &quot;{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: &#39;&#39;}, \
+        goal_id: { stamp: { secs: 0, nsecs: 0}}, \
+        goal: {target_position: 0.0, speed: 5.0, effort: 10.0}}&quot;
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="vacuum-gripper">
+<h2>Vacuum gripper<a class="headerlink" href="#vacuum-gripper" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="26%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Description</th>
+<th class="head">direction:</th>
+<th class="head">power_percentage[%]</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Suction</td>
+<td>-1</td>
+<td rowspan="3">40 - 100</td>
+</tr>
+<tr class="row-odd"><td>Stop</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>Blow</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><p class="first">Suction</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic pub /cobotta/vacuum_move/goal \
+    denso_cobotta_gripper/VacuumMoveActionGoal \
+      &quot;{header:  {seq: 0, stamp: {secs: 0, nsecs: 0},  frame_id: &#39;&#39;}, \
+         goal_id: { stamp: { secs: 0, nsecs: 0}}, \
+         goal: {direction: 1, power_percentage: 40.0}}&quot;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Stop</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic pub /cobotta/vacuum_move/goal \
+    denso_cobotta_gripper/VacuumMoveActionGoal \
+      &quot;{header:  {seq: 0, stamp: {secs: 0, nsecs: 0},  frame_id: &#39;&#39;}, \
+         goal_id: { stamp: { secs: 0, nsecs: 0}}, \
+         goal: {direction: 0, power_percentage: 40.0}}&quot;
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="rosservice.html" class="btn btn-neutral" title="rosservice" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, DENSO WAVE INCORPORATED.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.2.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
