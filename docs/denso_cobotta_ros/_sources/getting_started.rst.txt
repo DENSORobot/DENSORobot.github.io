@@ -1,0 +1,12 @@
+.. getting_started.rst
+
+Getting started
+===============
+
+Contents:
+
+.. toctree::
+   :maxdepth: 1
+
+   /getting_started-kinetic
+   /getting_started-melodic

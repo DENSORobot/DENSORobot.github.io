@@ -1,54 +1,55 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CALSET &mdash; denso_cobotta_ros 1.2.2 documentation</title>
+  <title>CALSET &mdash; denso_cobotta_ros 1.2.3 documentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
   
 
   
-
-  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="denso_cobotta_ros 1.2.2 documentation" href="../index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> denso_cobotta_ros
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> denso_cobotta_ros
           
 
           
@@ -58,7 +59,7 @@
             
             
               <div class="version">
-                1.2.2
+                1.2.3
               </div>
             
           
@@ -75,11 +76,15 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart_on_moveit.html">Quickstart on MoveIt!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html">Command Reference</a></li>
@@ -88,40 +93,61 @@
             
           
         </div>
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">denso_cobotta_ros</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">denso_cobotta_ros</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>CALSET</li>
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>CALSET</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/command_reference/rosservice_calset.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/command_reference/rosservice_calset.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -135,30 +161,30 @@ is called CALSET.</p>
 <ol class="arabic">
 <li><p class="first">Edit the RANG value</p>
 <p>Look at the QR code side of COBOTTA:</p>
-<div class="highlight-python"><div class="highlight"><pre>CVR038A1-*****,J1:&lt;a&gt;,J2:&lt;b&gt;,J2:&lt;b&gt;,J3:&lt;c&gt;,J4:&lt;d&gt;,J5:&lt;e&gt;,J6:&lt;f&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CVR038A1</span><span class="o">-*****</span><span class="p">,</span><span class="n">J1</span><span class="p">:</span><span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span><span class="p">,</span><span class="n">J2</span><span class="p">:</span><span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="p">,</span><span class="n">J2</span><span class="p">:</span><span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="p">,</span><span class="n">J3</span><span class="p">:</span><span class="o">&lt;</span><span class="n">c</span><span class="o">&gt;</span><span class="p">,</span><span class="n">J4</span><span class="p">:</span><span class="o">&lt;</span><span class="n">d</span><span class="o">&gt;</span><span class="p">,</span><span class="n">J5</span><span class="p">:</span><span class="o">&lt;</span><span class="n">e</span><span class="o">&gt;</span><span class="p">,</span><span class="n">J6</span><span class="p">:</span><span class="o">&lt;</span><span class="n">f</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Edit &lt;a&gt;, &lt;b&gt;, &lt;c&gt;, &lt;d&gt;, &lt;e&gt;, &lt;f&gt; to
-<code class="docutils literal"><span class="pre">denso_cobotta_ros/denso_cobotta_driver/config/parameters.yaml</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>rang_value:
-- &lt;a&gt;
-- &lt;b&gt;
-- &lt;c&gt;
-- &lt;d&gt;
-- &lt;e&gt;
-- &lt;f&gt;
+<code class="docutils literal notranslate"><span class="pre">denso_cobotta_ros/denso_cobotta_driver/config/parameters.yaml</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rang_value</span><span class="p">:</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">c</span><span class="o">&gt;</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">d</span><span class="o">&gt;</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">e</span><span class="o">&gt;</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">f</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Run the denso_cobotta_driver node</p>
 <p>Try:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ roslaunch denso_cobotta_driver denso_cobotta_driver.launch
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ roslaunch denso_cobotta_driver denso_cobotta_driver.launch
 </pre></div>
 </div>
 </li>
 <li><p class="first">CALSET</p>
 <p>Enter the CALSET command:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ rosservice call /cobotta/exec_calset
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosservice call /cobotta/exec_calset
 </pre></div>
 </div>
 </li>
@@ -169,7 +195,7 @@ is called CALSET.</p>
 because Motor does not become on.</p>
 </div>
 <p>Try:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ roslaunch denso_cobotta_bringup denso_cobotta_bringup.launch [gripper_type:=parallel|vacuum]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ roslaunch denso_cobotta_bringup denso_cobotta_bringup.launch [gripper_type:=parallel|vacuum]
 </pre></div>
 </div>
 </li>
@@ -178,6 +204,7 @@ because Motor does not become on.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
@@ -186,11 +213,19 @@ because Motor does not become on.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, DENSO WAVE INCORPORATED.
+        
+        &copy; Copyright 2019, DENSO WAVE INCORPORATED
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -202,37 +237,15 @@ because Motor does not become on.</p>
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.2.2',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

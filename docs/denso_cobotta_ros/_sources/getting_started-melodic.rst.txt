@@ -1,0 +1,61 @@
+.. getting_started-melodic.rst
+
+===================
+ROS Melodic Moreina
+===================
+
+------
+System
+------
+
+#. Install the following software
+
+   * `Ubuntu-18.04 desktop <https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop>`_
+   * `ROS Melodic <http://wiki.ros.org/melodic/Installation/Ubuntu>`_
+   * `COBOTTA driver for Linux <https://www.denso-wave.com/en/robot/download/application/cobotta_driver_for_linux.html>`_
+
+
+#. Install the following dependencies
+
+   * ros-melodic-moveit
+   * ros-melodic-controller-manager
+   * ros-melodic-position-controllers
+   * ros-melodic-joint-state-controller
+   * ros-melodic-joint-trajectory-controller
+   * ros-melodic-joint-limits-interface
+   * ros-melodic-transmission-interface
+
+   ::
+
+      $ sudo apt install ros-melodic-moveit \
+                         ros-melodic-controller-manager \
+			 ros-melodic-position-controllers \
+			 ros-melodic-joint-state-controller \
+			 ros-melodic-joint-trajectory-controller \
+			 ros-melodic-joint-limits-interface \
+			 ros-melodic-transmission-interface
+
+-----
+Build
+-----
+#. Download the source code
+
+   ::
+
+      $ mkdir -p ~/catkin_ws/src
+      $ cd ~/catkin_ws/src
+      $ git clone -b melodic-devel https://github.com/DENSORobot/denso_cobotta_ros.git
+
+#. Build
+
+   ::
+
+      $ cd ~/catkin_ws
+      $ source /opt/ros/melodic/setup.bash
+      $ catkin_make
+      $ source ~/catkin_ws/devel/setup.bash
+
+#. Start
+
+   See :doc:`Quickstart on MoveIt! </quickstart_on_moveit>`.
+

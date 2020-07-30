@@ -1,0 +1,61 @@
+.. getting_started-kinetic.rst
+
+================
+ROS Kinetic Kame
+================
+
+------
+System
+------
+
+#. Install the following software
+
+   * `Ubuntu-16.04 desktop <https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop-1604>`_
+   * `ROS Kinetic <http://wiki.ros.org/kinetic/Installation/Ubuntu>`_
+   * `COBOTTA driver for Linux <https://www.denso-wave.com/en/robot/download/application/cobotta_driver_for_linux.html>`_
+
+
+#. Install the following dependencies
+
+   * ros-kinetic-moveit
+   * ros-kinetic-controller-manager
+   * ros-kinetic-position-controllers
+   * ros-kinetic-joint-state-controller
+   * ros-kinetic-joint-trajectory-controller
+   * ros-kinetic-joint-limits-interface
+   * ros-kinetic-transmission-interface
+
+   ::
+
+      $ sudo apt install ros-kinetic-moveit \
+                         ros-kinetic-controller-manager \
+			 ros-kinetic-position-controllers \
+			 ros-kinetic-joint-state-controller \
+			 ros-kinetic-joint-trajectory-controller \
+			 ros-kinetic-joint-limits-interface \
+			 ros-kinetic-transmission-interface
+
+-----
+Build
+-----
+#. Download the source code
+
+   ::
+
+      $ mkdir -p ~/catkin_ws/src
+      $ cd ~/catkin_ws/src
+      $ git clone -b kinetic-devel https://github.com/DENSORobot/denso_cobotta_ros.git
+
+#. Build
+
+   ::
+
+      $ cd ~/catkin_ws
+      $ source /opt/ros/kinetic/setup.bash
+      $ catkin_make
+      $ source ~/catkin_ws/devel/setup.bash
+
+#. Start
+
+   See :doc:`Quickstart on MoveIt! </quickstart_on_moveit>`.
+
