@@ -23,7 +23,6 @@ Button
 ------
 MiniIO
 ------
-
 +---------+---------+------------------+
 |  data:  |   Hex   |   Description    |
 +=========+=========+==================+
@@ -45,6 +44,8 @@ MiniIO
    ::
 
       $ rostopic pub /cobotta/miniIO_output std_msgs/UInt16 "data: 0"
+
+.. tip:: For more information about I/O allocation, please refer to COBOTTA user manual ID:7261.
 
 -----------
 Robot state
